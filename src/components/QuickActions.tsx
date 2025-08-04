@@ -20,24 +20,19 @@ const ActionCard: React.FC<ActionCardProps> = ({
   onClick 
 }) => (
   <div 
-    className="glass rounded-xl p-6 hover-lift hover-glow cursor-pointer transition-all duration-300 animate-scale-in group"
+    className="glass rounded-xl p-6 hover-lift hover-glow cursor-pointer transition-all duration-500 animate-scale-in group hover-scale"
     style={{ animationDelay: delay }}
     onClick={onClick}
   >
     <div className="flex flex-col items-center text-center space-y-4">
-      <div className="relative">
-        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      <div className="relative transform group-hover:scale-110 transition-transform duration-500">
+        <div className="opacity-100 transition-all duration-500 group-hover:animate-float">
           {animatedIcon}
-        </div>
-        <div className="opacity-100 group-hover:opacity-0 transition-opacity duration-300">
-          <div className="p-4 rounded-xl gradient-primary">
-            {icon}
-          </div>
         </div>
       </div>
       <div>
-        <h3 className="text-lg font-semibold text-foreground mb-2">{title}</h3>
-        <p className="text-muted-foreground text-sm">{description}</p>
+        <h3 className="text-lg font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">{title}</h3>
+        <p className="text-muted-foreground text-sm group-hover:text-accent-foreground transition-colors duration-300">{description}</p>
       </div>
     </div>
   </div>
@@ -46,29 +41,29 @@ const ActionCard: React.FC<ActionCardProps> = ({
 export const QuickActions: React.FC = () => {
   const actions = [
     {
-      title: 'Start Interview',
-      description: 'Begin a new virtual interview session',
+      title: 'Join Interview',
+      description: 'Join your scheduled interview session',
       icon: <Video className="w-8 h-8 text-white" />,
       animatedIcon: <InterviewIcon className="w-16 h-16" />,
       delay: '0.1s'
     },
     {
-      title: 'Code Challenge',
-      description: 'Create or manage coding assessments',
+      title: 'Practice Coding',
+      description: 'Practice with coding challenges',
       icon: <Plus className="w-8 h-8 text-white" />,
       animatedIcon: <CodingIcon className="w-16 h-16" />,
       delay: '0.2s'
     },
     {
-      title: 'View Analytics',
-      description: 'Check interview performance metrics',
+      title: 'My Progress',
+      description: 'View your interview performance',
       icon: <BarChart3 className="w-8 h-8 text-white" />,
       animatedIcon: <AnalyticsIcon className="w-16 h-16" />,
       delay: '0.3s'
     },
     {
-      title: 'Schedule',
-      description: 'Manage upcoming interview sessions',
+      title: 'My Schedule',
+      description: 'View upcoming interviews',
       icon: <Settings className="w-8 h-8 text-white" />,
       animatedIcon: <CalendarIcon className="w-16 h-16" />,
       delay: '0.4s'

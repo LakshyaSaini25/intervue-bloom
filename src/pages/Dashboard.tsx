@@ -4,6 +4,7 @@ import { DashboardStats } from '../components/DashboardStats';
 import { QuickActions } from '../components/QuickActions';
 import { UpcomingInterviews } from '../components/UpcomingInterviews';
 import { RecentActivity } from '../components/RecentActivity';
+import { ThemeToggle } from '../components/ThemeToggle';
 
 export const Dashboard: React.FC = () => {
   return (
@@ -20,7 +21,7 @@ export const Dashboard: React.FC = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold text-foreground">InterviewBloom</h1>
-                <p className="text-sm text-muted-foreground">Professional Interview Platform</p>
+                <p className="text-sm text-muted-foreground">Student Interview Portal</p>
               </div>
             </div>
             
@@ -35,15 +36,18 @@ export const Dashboard: React.FC = () => {
                 />
               </div>
               
+              {/* Theme Toggle */}
+              <ThemeToggle />
+              
               {/* Notifications */}
-              <button className="p-2 rounded-lg hover:bg-accent transition-colors relative">
-                <Bell className="w-5 h-5 text-muted-foreground" />
+              <button className="p-2 rounded-lg hover:bg-accent transition-all duration-300 hover-scale relative">
+                <Bell className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
                 <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full animate-pulse-soft"></span>
               </button>
               
               {/* Settings */}
-              <button className="p-2 rounded-lg hover:bg-accent transition-colors">
-                <Settings className="w-5 h-5 text-muted-foreground" />
+              <button className="p-2 rounded-lg hover:bg-accent transition-all duration-300 hover-scale">
+                <Settings className="w-5 h-5 text-muted-foreground hover:text-primary transition-colors" />
               </button>
               
               {/* User Menu */}
@@ -52,8 +56,8 @@ export const Dashboard: React.FC = () => {
                   <User className="w-4 h-4 text-white" />
                 </div>
                 <div className="hidden md:block">
-                  <p className="text-sm font-medium text-foreground">John Doe</p>
-                  <p className="text-xs text-muted-foreground">HR Manager</p>
+                  <p className="text-sm font-medium text-foreground">Alex Rivera</p>
+                  <p className="text-xs text-muted-foreground">Computer Science Student</p>
                 </div>
                 <button className="p-1 rounded hover:bg-accent transition-colors">
                   <LogOut className="w-4 h-4 text-muted-foreground" />
@@ -68,8 +72,8 @@ export const Dashboard: React.FC = () => {
       <main className="max-w-7xl mx-auto px-6 py-8">
         {/* Welcome Section */}
         <div className="mb-8 animate-fade-up">
-          <h2 className="text-3xl font-bold text-foreground mb-2">Welcome back, John! 👋</h2>
-          <p className="text-muted-foreground">Here's what's happening with your interviews today.</p>
+          <h2 className="text-3xl font-bold text-foreground mb-2">Welcome back, Alex! 👋</h2>
+          <p className="text-muted-foreground">Ready to ace your upcoming interviews? Let's get started!</p>
         </div>
 
         {/* Stats Grid */}
@@ -87,41 +91,41 @@ export const Dashboard: React.FC = () => {
         {/* Additional Insights */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="glass rounded-xl p-6 animate-fade-up" style={{ animationDelay: '0.8s' }}>
-            <h3 className="text-lg font-semibold text-foreground mb-4">Performance</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-4">My Performance</h3>
             <div className="space-y-3">
               <div className="flex justify-between items-center">
                 <span className="text-sm text-muted-foreground">Interview Success Rate</span>
-                <span className="text-sm font-medium text-foreground">94.2%</span>
+                <span className="text-sm font-medium text-foreground">87.5%</span>
               </div>
               <div className="w-full bg-accent rounded-full h-2">
-                <div className="gradient-primary h-2 rounded-full" style={{ width: '94.2%' }}></div>
+                <div className="gradient-primary h-2 rounded-full" style={{ width: '87.5%' }}></div>
               </div>
             </div>
             <div className="space-y-3 mt-4">
               <div className="flex justify-between items-center">
-                <span className="text-sm text-muted-foreground">Candidate Satisfaction</span>
-                <span className="text-sm font-medium text-foreground">4.8/5</span>
+                <span className="text-sm text-muted-foreground">Average Rating</span>
+                <span className="text-sm font-medium text-foreground">4.6/5</span>
               </div>
               <div className="w-full bg-accent rounded-full h-2">
-                <div className="gradient-primary h-2 rounded-full" style={{ width: '96%' }}></div>
+                <div className="gradient-primary h-2 rounded-full" style={{ width: '92%' }}></div>
               </div>
             </div>
           </div>
 
           <div className="glass rounded-xl p-6 animate-fade-up" style={{ animationDelay: '0.9s' }}>
-            <h3 className="text-lg font-semibold text-foreground mb-4">Quick Stats</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-4">My Stats</h3>
             <div className="space-y-4">
               <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">Open Positions</span>
-                <span className="text-lg font-bold text-primary">12</span>
+                <span className="text-sm text-muted-foreground">Applications Sent</span>
+                <span className="text-lg font-bold text-primary">24</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">Candidates in Pipeline</span>
-                <span className="text-lg font-bold text-primary">247</span>
+                <span className="text-sm text-muted-foreground">Interviews Scheduled</span>
+                <span className="text-lg font-bold text-primary">8</span>
               </div>
               <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">This Week's Interviews</span>
-                <span className="text-lg font-bold text-primary">156</span>
+                <span className="text-sm text-muted-foreground">This Month's Practice</span>
+                <span className="text-lg font-bold text-primary">42h</span>
               </div>
             </div>
           </div>

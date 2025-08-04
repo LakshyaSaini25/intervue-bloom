@@ -55,7 +55,7 @@ export const UpcomingInterviews: React.FC = () => {
   return (
     <div className="glass rounded-xl p-6 animate-fade-up" style={{ animationDelay: '0.5s' }}>
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-bold text-foreground">Today's Interviews</h2>
+        <h2 className="text-xl font-bold text-foreground">My Upcoming Interviews</h2>
         <span className="text-sm text-muted-foreground">{interviews.length} scheduled</span>
       </div>
       
@@ -97,8 +97,8 @@ export const UpcomingInterviews: React.FC = () => {
       </div>
       
       <div className="mt-6 pt-4 border-t border-border">
-        <button className="w-full py-3 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover-lift">
-          View All Interviews
+        <button className="w-full py-3 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500 hover-lift hover-scale">
+          View All My Interviews
         </button>
       </div>
     </div>

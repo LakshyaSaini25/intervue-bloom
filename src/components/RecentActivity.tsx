@@ -110,8 +110,8 @@ export const RecentActivity: React.FC = () => {
       </div>
       
       <div className="mt-6 pt-4 border-t border-border">
-        <button className="w-full py-3 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover-lift">
-          View All Activity
+        <button className="w-full py-3 rounded-lg border border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-500 hover-lift hover-scale">
+          View All My Activity
         </button>
       </div>
     </div>
