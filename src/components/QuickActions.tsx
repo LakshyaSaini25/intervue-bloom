@@ -1,5 +1,6 @@
 import React from 'react';
 import { Video, Plus, Settings, BarChart3 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { InterviewIcon, CodingIcon, AnalyticsIcon, CalendarIcon } from './AnimatedSVGs';
 
 interface ActionCardProps {
@@ -39,6 +40,8 @@ const ActionCard: React.FC<ActionCardProps> = ({
 );
 
 export const QuickActions: React.FC = () => {
+  const navigate = useNavigate();
+
   const actions = [
     {
       title: 'Join Interview',
@@ -78,7 +81,13 @@ export const QuickActions: React.FC = () => {
           <ActionCard 
             key={index} 
             {...action}
-            onClick={() => console.log(`${action.title} clicked`)}
+            onClick={() => {
+              if (action.title === 'Join Interview') {
+                navigate('/interview');
+              } else {
+                console.log(`${action.title} clicked`);
+              }
+            }}
           />
         ))}
       </div>
