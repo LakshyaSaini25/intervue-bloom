@@ -18,23 +18,30 @@ export const BackgroundIcons: React.FC = () => {
       {icons.map(({ Icon, delay, position }, index) => (
         <div
           key={index}
-          className={`absolute ${position} opacity-10 animate-float`}
-          style={{ animationDelay: delay }}
+          className={`absolute ${position} opacity-30 animate-float`}
+          style={{ 
+            animationDelay: delay,
+            filter: 'drop-shadow(0 0 10px hsl(var(--primary))) drop-shadow(0 0 20px hsl(var(--primary-glow))) drop-shadow(0 0 30px hsl(var(--primary)))',
+          }}
         >
-          <Icon className="w-16 h-16 text-primary animate-pulse-soft" />
+          <Icon className="w-16 h-16 text-primary animate-pulse-soft" style={{
+            filter: 'drop-shadow(0 0 8px currentColor)'
+          }} />
         </div>
       ))}
       
-      {/* Additional floating particles */}
+      {/* Additional floating particles with neon glow */}
       {Array.from({ length: 15 }).map((_, index) => (
         <div
           key={`particle-${index}`}
-          className={`absolute w-2 h-2 bg-primary-glow rounded-full opacity-20 animate-float`}
+          className={`absolute w-3 h-3 bg-primary rounded-full opacity-40 animate-float`}
           style={{
             left: `${Math.random() * 100}%`,
             top: `${Math.random() * 100}%`,
             animationDelay: `${Math.random() * 4}s`,
-            animationDuration: `${3 + Math.random() * 2}s`
+            animationDuration: `${3 + Math.random() * 2}s`,
+            boxShadow: '0 0 10px hsl(var(--primary)), 0 0 20px hsl(var(--primary-glow)), 0 0 30px hsl(var(--primary))',
+            filter: 'blur(0.5px)'
           }}
         />
       ))}
