@@ -92,7 +92,7 @@ export default function Interview() {
       {/* Tutorial Modal */}
       {showTutorial && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 animate-fade-in">
-          <div className="glass rounded-xl p-8 max-w-md mx-4 animate-scale-in">
+          <div className="glass rounded-xl p-8 max-w-md mx-4 animate-scale-in bg-purple-light/20 backdrop-blur-md border border-purple-light/30">
             <h3 className="text-xl font-bold text-foreground mb-4">Interview Tutorial</h3>
             <div className="space-y-3">
               {tutorialSteps.map((step, index) => (

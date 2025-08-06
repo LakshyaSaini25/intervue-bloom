@@ -18,7 +18,7 @@ export const BackgroundIcons: React.FC = () => {
       {icons.map(({ Icon, delay, position }, index) => (
         <div
           key={index}
-          className={`absolute ${position} opacity-30 animate-float`}
+          className={`absolute ${position} opacity-60 animate-float`}
           style={{ 
             animationDelay: delay,
             filter: 'drop-shadow(0 0 10px hsl(var(--primary))) drop-shadow(0 0 20px hsl(var(--primary-glow))) drop-shadow(0 0 30px hsl(var(--primary)))',

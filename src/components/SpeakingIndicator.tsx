@@ -7,7 +7,7 @@ interface SpeakingIndicatorProps {
 
 export const SpeakingIndicator: React.FC<SpeakingIndicatorProps> = ({ currentSpeaker }) => {
   return (
-    <div className="glass rounded-xl p-4 animate-fade-up">
+    <div className="glass rounded-xl p-4 animate-fade-up bg-purple-light/20 backdrop-blur-md border border-purple-light/30">
       <div className="flex items-center space-x-4">
         {/* AI Bot Indicator */}
         <div className={`flex items-center space-x-2 p-3 rounded-lg transition-all duration-500 ${
